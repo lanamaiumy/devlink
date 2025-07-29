@@ -1,0 +1,103 @@
+$primary-color: #5a5a5a;
+$secondary-color: #55bdfa;
+$text-color: #dcdcdc;
+
+.hero-section {
+  background-image: url(../../../assets/background-inicial.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(90vh - 80px); 
+  padding: 2rem;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1300px;
+  width: 100%;
+  gap: 3rem;
+}
+
+.hero-text {
+  max-width: 50%;
+  
+  h1 {
+    font-family: "Barriecito", system-ui;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .subtitle {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-family: "Quicksand", sans-serif;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn-primary {
+  background-color: #ff6c47;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid $text-color;
+}
+
+.hero-image {
+  max-width: 45%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
