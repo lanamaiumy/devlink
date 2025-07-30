@@ -3,16 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Link } from '../models/link';
 import { Category } from '../models/category';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({ providedIn: 'root' })
 export class LinkService {
-  private apiUrl = 'http://localhost:3000/api/v1/links';
-  private categoriesApiUrl = 'http://localhost:3000/api/v1/categories';
+  private apiUrl = `${environment.apiUrl}/links`;
+  private categoriesApiUrl = `${environment.apiUrl}/categories`;
 
   constructor(private http: HttpClient) { }
 
   getLinks(): Observable<Link[]> {
-    return this.http.get<Link[]>(`${this.apiUrl}/links`);
+    return this.http.get<Link[]>(this.apiUrl);
   }
 
   getCategoriesWithLinks(): Observable<Category[]> {
