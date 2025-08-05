@@ -6,6 +6,12 @@
       <button class="open-modal-btn" (click)="openCreateModal()">+ Sugestão de novo link</button>
     </div>
 
+    <div *ngIf="isLoading" class="loading-banner">
+        Aguarde, a lista de links está sendo carregada…
+        <strong *ngIf="countdownSeconds > 0">{{ countdownSeconds }}s</strong>
+        <strong *ngIf="countdownSeconds === 0">ainda carregando…</strong>
+    </div>
+
     <div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <button class="close-modal-btn" (click)="closeModal()">&times;</button>

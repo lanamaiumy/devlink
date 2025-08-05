@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment.prod';
 
 @Injectable({ providedIn: 'root' })
 export class LinkService {
-  private apiUrl = `${environment.apiUrl}/links`;
+  private apiUrl = "`${environment.apiUrl}/links`";
   private categoriesApiUrl = `${environment.apiUrl}/categories`;
 
   constructor(private http: HttpClient) { }

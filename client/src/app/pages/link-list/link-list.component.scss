@@ -12,6 +12,8 @@ $border-color: #141414;
   background-attachment: fixed;
   background-position: center;
   display: flex;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .container {
@@ -36,6 +38,16 @@ $border-color: #141414;
     font-weight: 800;
     letter-spacing: 2px;
   }
+}
+
+.loading-banner {
+  margin: 12px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #dddddd;
+  color: #414141;
+  font-weight: 500;
+  border: 1px solid #181818;
 }
 
 .open-modal-btn {
